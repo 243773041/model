@@ -35,7 +35,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="./index.php">返回前台</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">admin <span class="caret"></span></a>
+<!--																																输出存入sesson登陆的用户名-->
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['user']['username'] ?> <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="?s=admin/user/changePassword">修改密码</a></li>
 						<li><a href="?s=admin/login/out">退出</a></li>

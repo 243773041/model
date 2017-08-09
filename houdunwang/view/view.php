@@ -7,7 +7,7 @@
  */
 namespace houdunwang\view;
 
-class view{
+class View{
 //调用未定义的静态方法会自动执行此方法  默认是with() make()方法  $name方法名称 with() make()   $arguments参数值是$data,$tag
     public  static  function __callStatic($name, $arguments){
         //		实例化对象类Base()  $name并且调用 with（）方法 make()方法

@@ -105,7 +105,7 @@ class  Base{
     }
 
 
-
+//    录入内容
     public function save($post){
         //查询当前表信息
         $tableInfo = $this->q("DESC {$this->table}");

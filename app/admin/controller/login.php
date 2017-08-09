@@ -10,9 +10,10 @@ namespace app\admin\controller;
 
 
 use houdunwang\core\Controller;
-use houdunwang\view\view;
+
 use Gregwar\Captcha\CaptchaBuilder;
-use Gregwar\Captcha\PhraseBuilder;
+
+use houdunwang\view\View;
 use system\model\User;
 
 
@@ -21,7 +22,10 @@ class login extends Controller{
 //        登录页面
 public function index(){
 
+//    $password = password_hash('admin888',PASSWORD_DEFAULT);
+//    echo $password;
       if(IS_POST){
+
          $post= $_POST;
 
 //                判断验证码是否正确  提交过来的的验证码 跟存入到$_SESSION 验证对比
@@ -36,6 +40,7 @@ public function index(){
         $data  = User::where("username='{$post['username']}'")->get();
 //         用户名判断 用户名不存在
 //          p( $data);exit;
+
          if(!$data) {
 
              return $this->error('用户名不存在');
@@ -94,7 +99,7 @@ public function index(){
 //  再次跳转到../houdunwang/view/Base.php  找到Base类 里面的 make()方法
 //        return把值返回到了 ../houdunwang/core/Boot.php文件
 
-    return view::make();
+    return View::make();
 
 
 

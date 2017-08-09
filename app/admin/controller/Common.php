@@ -9,6 +9,7 @@
 namespace app\admin\controller;
 
 //导入 ../houdunwang/core/Controller.php文件 里  Controller类
+
 use houdunwang\core\Controller;
 
 // 继承../houdunwang/core/Controller.php文件 里 父类方法

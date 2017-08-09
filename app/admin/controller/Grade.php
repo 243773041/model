@@ -11,7 +11,7 @@ namespace app\admin\controller;
 //就是 调用../houdunwang/core/Controller.php 文件  controller（）类  success（）方法 和setRedirect（）方法
 use houdunwang\core\Controller;
 
-use houdunwang\view\view;
+use houdunwang\view\View;
 
 use system\model\Grade as GradeModel;
 
@@ -23,7 +23,7 @@ class Grade extends Common{
     public function lists(){
 
 
-//        调用GradeModel save方法  继承父类方法houdunwang\model\Model   save方法方法不存在 跳转到Base类 执行    get()方法
+//        调用GradeModel get方法  继承父类方法houdunwang\model\Model   save方法方法不存在 跳转到Base类 执行    get()方法
         $data= GradeModel::get();
         //          make()加载模板  默认路径目录是./app/admin/view/entry/lists.php
 //        默认跳转到 houdunwang/view/view.php  执行对象类view（）   with（）方法  和make()方法

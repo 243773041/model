@@ -14,7 +14,7 @@ use houdunwang\model\Model;
 use houdunwang\view\View;
 
 //前台首页控制器
-class Entry extends Common{
+class Entry extends Controller{
 
 
 
